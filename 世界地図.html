@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Milk production'],
+          ['United States', 101251009],
+          ['India', 87822387],
+          ['Brazil',36508411],
+          ['China', 34400000],
+          ['Germany', 33164910],
+          ['Russia', 31959801],
+          ['France', 25147310],
+          ['Pakistan', 22508000],
+          ['New Zealand', 21871305],
+          ['Turkey', 20000000],
+          ['Japan', 7438218],
+
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+
+       };
+
+
+
+    </script>
+  </head>
+  <body>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
+    <biv>2020 World Milk Production Country Ranking(from "GLOBAL NOTE")</biv>
+  </body>
+</html>
+

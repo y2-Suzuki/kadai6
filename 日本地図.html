@@ -1,0 +1,137 @@
+
+<html>
+
+    <head>
+  
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       <script type="text/javascript">
+       google.charts.load('current', {'packages':['geochart']});
+  
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+  
+          var data = google.visualization.arrayToDataTable([
+  
+            ['都道府県', 'EC利用状況'],
+  
+            ['北海道', 76],
+  
+            ['青森', 70],
+  
+            ['秋田', 67],
+  
+            ['岩手', 69],
+  
+            ['宮城', 77],
+  
+            ['山形', 71],
+  
+            ['福島', 72],
+  
+            ['栃木', 78],
+  
+            ['群馬', 78],
+  
+            ['茨城', 78],
+  
+            ['東京', 88],
+  
+            ['埼玉', 85],
+  
+            ['千葉', 79],
+  
+            ['神奈川',84],
+  
+            ['静岡', 78],
+  
+            ['愛知', 82],
+  
+            ['岐阜', 74],
+  
+            ['三重', 77],
+  
+            ['滋賀', 83],
+  
+            ['京都', 80],
+  
+            ['大阪', 84],
+  
+            ['奈良', 83],
+  
+            ['和歌山', 74],
+  
+            ['兵庫', 81],
+  
+            ['徳島', 74],
+  
+            ['香川', 73],
+  
+            ['愛媛', 73],
+  
+            ['高知', 68],
+  
+            ['福岡', 77],
+  
+            ['佐賀', 74],
+  
+            ['長崎', 74],
+  
+            ['大分', 73],
+  
+            ['熊本', 72],
+  
+            ['宮崎', 68],
+  
+            ['鹿児島',70],
+  
+            ['沖縄', 74],
+  
+            ['岡山', 74],
+  
+            ['広島', 80],
+  
+            ['山口', 73],
+  
+            ['鳥取', 70],
+  
+            ['島根', 73],
+  
+            ['石川', 78],
+  
+            ['福井', 73],
+  
+            ['富山', 74],
+  
+            ['山梨', 75],
+  
+            ['長野', 73],
+  
+            ['新潟', 71]
+  
+          ]);
+  
+          var options = {
+        region: 'JP',
+          resolution: 'provinces'
+  
+      };
+  
+          var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+  
+          chart.draw(data, options);
+        };
+      
+
+      </script>
+  
+    </head>
+  
+    <body>
+      <div id="regions_div" style="width: 900px; height: 500px;"></div>
+      <div>都道府県別インターネット利用率(総務省20218年調査）</div>
+    </body>
+
+
+  </html>
+  
